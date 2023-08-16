@@ -4,18 +4,23 @@
 --White-color: #FFFFFF;
 --White-primary: #F0F2F5;
 --Black-color: #000000;
---Gradient: background: linear-gradient(90deg, #B16CEA 14.06%, #FF5E69 44.79%, #FF8A56 71.88%, #FFA84B 100%);
+--Gradient-background: linear-gradient(90deg, #B16CEA 14.06%, #FF5E69 44.79%, #FF8A56 71.88%, #FFA84B 100%);
 }
 body{
     font-family: 'Bai Jamjuree', sans-serif;
-    background-color: var(--White-primary);
+    background-color: var(--White-primary)!important;
   }
-
+a{
+    color: var(--Black-color)!important;
+    text-decoration: none!important;
+}
 ul{
     list-style: none;
 }
 .color{
-    color:  rgba(166,77,195,1) 0%, rgba(211,48,224,1) 0%, rgba(235,64,14,1) 49%, rgba(231,151,19,1) 74%, rgba(231,151,19,1) 100%, rgba(231,151,19,1) 100%;
+    background: var(--Gradient-background);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
   /* Home page */
 #main-nav div ul a{
@@ -27,6 +32,7 @@ ul{
   grid-template-columns: 1fr 5fr 1fr;
   padding-left: 100px;
   padding-right: 100px;
+  padding-top: 20px;
   background-color: var(--White-primary);
 }
 #main-nav ul{
@@ -43,19 +49,27 @@ ul{
 
 .chatbox{
     display: inline-block;
-    text-transform: uppercase;
-    padding: 0.75rem;
+    text-transform: uppercase;    
+}
+.chatbox a{
     border-radius: 20px;
     border: var(--Black-color) solid 1px;
+    padding: 0.75rem;
     margin:  0.5rem;
-    
 }
 #chat a{
-    color: var(--White-color);
+    color: var(--White-color)!important;
     background-color: var(--Black-color);
     text-decoration: none;
-    border-radius: 40px;
-    padding: 20px;
+    border-radius: 20px;
+    padding: 0.75rem;
+}
+#chat2 a{
+    color: white!important;
+    background-color: var(--Black-color);
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 0.75rem;
 }
 .logo{
   display: grid;
@@ -63,7 +77,7 @@ ul{
   margin: 2rem 0;
   grid-gap: 1.5rem;
   background-color: var(--White-primary);
-  margin: 5px;
+  margin: 15px;
 }
 .header{
     display: flex;
@@ -75,8 +89,7 @@ ul{
  /* service */
 #service-table{
     row-gap: 100px;
-    
-    
+    margin-bottom: 50px;
 }
 #service-table tr td p{
     max-width: 300px;
@@ -84,6 +97,7 @@ ul{
 #service-table tr td{
     padding-left: 100px;
     padding-right: 100px;
+    padding-bottom: 30px;
 }
 .hire{
     display: inline-block;
@@ -108,6 +122,18 @@ ul{
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
     gap: 25px;
+}
+#service-copyrigt{
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+}
+#service-copyrigt ul{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    gap: 25px;
+}
+.img{
+     border-radius: 20px;
 }
 /* BLog */
 .blog-header{
@@ -139,4 +165,37 @@ ul{
     border-radius: 40px;
     padding: 10px;
     margin: 5px;
+}
+/* contact */
+#contact{
+    display: flex;
+
+    padding: 50px;
+    max-width: 1800px;
+}
+.contact-intro{
+    padding: 50px;
+    max-width: 400px;
+}
+#contact-form{
+    padding: 50px;
+    margin-left: 200px;
+}
+#contact-form div input{
+    border: none!important;
+    background-color: var(--White-color);
+    padding: 30px;
+    padding-right: 110px;
+    margin: 10px;
+}
+#FAQ{
+    padding: 100px;
+}
+.form-grp{
+    position: relative;
+}
+.form-icon{
+    position: absolute;
+    top: 35px;
+    left: 20px;
 }
